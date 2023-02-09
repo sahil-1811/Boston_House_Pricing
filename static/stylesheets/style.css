@@ -10,7 +10,7 @@ body{
 
 
 .container {
-    background:linear-gradient(to right,#833ab4,#fd1d1d,#fcb045);
+    background:linear-gradient(to right,#845EC2,#2C73D2,#0081CF,#0089BA,#008E9B,#008F7A);
     background-size: 400% 400%;
     animation:body 10s infinite ease-in-out;
     margin: auto;
