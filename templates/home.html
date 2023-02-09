@@ -4,38 +4,50 @@
 <head>
   <meta charset="UTF-8">
   <title>House Prediction</title>
-  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css' >
 <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link href="{{ url_for('static', filename='stylesheets/style.css')}}"  rel='stylesheet'/>
+
+
 
   
 </head>
 
 <body>
- <div class="login">
-	<h1>Boston House Price Prediction</h1>
-
+    
+ <div class="login-dark">
+	
+    
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-      <input type="text" name="CRIM" placeholder="Per Capita Crime Rate by Town" required="required" /><br>
-    	<input type="text" name="ZN" placeholder="Residential Land Zoned for lots over 25,000 sq.ft." required="required" /><br>
-        <input type="text" name="INDUS" placeholder="Non-Retail business acres per town" required="required" /><br>
-        <input type="text" name="CHAS" placeholder="Charles River dummy variable" required="required" /><br>
-        <input type="text" name="NOX" placeholder="Nitric Oxides concentration (parts per 10 million)" required="required" /><br>
-        <input type="text" name="RM" placeholder="Average number of rooms per dwelling" required="required" /><br>
-        <input type="text" name="Age" placeholder="Age" required="required" /><br>
-        <input type="text" name="DIS" placeholder="Weighted distances to five Boston employment centres" required="required" /><br>
-        <input type="text" name="RAD" placeholder="Index of accessibility to radial highways" required="required" /><br>
-        <input type="text" name="TAX" placeholder="TAX" required="required" /><br>
-        <input type="text" name="PTRATIO" placeholder="Pupil-Teacher ratio by town" required="required" /><br>
-        <input type="text" name="B" placeholder="Outsiders" required="required" /><br>
-        <input type="text" name="LSTAT" placeholder=" % lower status of the population" required="required" /><br>
+        <h2>Boston House Price Prediction</h2>
+        
+        
+
+        <div class="form-group"><input type="text" class="form-control" name="CRIM" placeholder="Per Capita Crime Rate by Town" required="required" /></div>
+    	<input type="text"  class="form-control" name="ZN" placeholder="Residential Land Zoned for lots over 25,000 sq.ft." required="required" /><br>
+        <input type="text" class="form-control" name="INDUS" placeholder="Non-Retail business acres per town" required="required" /><br>
+        <input type="text" class="form-control" name="CHAS" placeholder="Charles River dummy variable" required="required" /><br>
+        <input type="text" class="form-control" name="NOX" placeholder="Nitric Oxides concentration (parts per 10 million)" required="required" /><br>
+        <input type="text" class="form-control" name="RM" placeholder="Average number of rooms per dwelling" required="required" /><br>
+        <input type="text" class="form-control" name="Age" placeholder="Age" required="required" /><br>
+        <input type="text" class="form-control" name="DIS" placeholder="Weighted distances to five Boston employment centres" required="required" /><br>
+        <input type="text" class="form-control" name="RAD" placeholder="Index of accessibility to radial highways" required="required" /><br>
+        <input type="text" class="form-control" name="TAX" placeholder="TAX" required="required" /><br>
+        <input type="text" class="form-control" name="PTRATIO" placeholder="Pupil-Teacher ratio by town" required="required" /><br>
+        <input type="text" class="form-control" name="B" placeholder="Outsiders" required="required" /><br>
+        <input type="text" class="form-control" name="LSTAT" placeholder=" % lower status of the population" required="required" /><br>
 
        
 
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        <button type="submit" class="btn btn-primary btn-block">Predict</button>
     </form>
+
 
    <br>
    <br>
@@ -43,6 +55,5 @@
    
  </div>
  {{prediction_text}}
-
 </body>
 </html>
