@@ -13,36 +13,87 @@
 </head>
 
 <body>
- <div id = "search">
+    <div class = "container">
 	
     
      <!-- Main Input For Receiving Query to our ML -->
-    <form action="{{ url_for('predict')}}"method="post" id ="myform">
-        <h1>Boston House Price Prediction</h1>
-        
-        
-        <label for="CRIM">Per Capita Crime Rate by Town</label>
-        <div class="form-group"><input type="text" class="form-control" name="CRIM" placeholder="Range between 0-25" required="required" /></div>
-    	<label for="ZN">Residential Land Zoned for lots over 25,000 sq.ft.</label>
-        <input type="text"  class="form-control" name="ZN" placeholder="Range between 0-100" required="required" /><br>
-        <input type="text" class="form-control" name="INDUS" placeholder="Non-Retail business acres per town" required="required" /><br>
-        <input type="text" class="form-control" name="CHAS" placeholder="Charles River dummy variable" required="required" /><br>
-        <input type="text" class="form-control" name="NOX" placeholder="Nitric Oxides concentration (parts per 10 million)" required="required" /><br>
-        <input type="text" class="form-control" name="RM" placeholder="Average number of rooms per dwelling" required="required" /><br>
-        <input type="text" class="form-control" name="Age" placeholder="Age" required="required" /><br>
-        <input type="text" class="form-control" name="DIS" placeholder="Weighted distances to five Boston employment centres" required="required" /><br>
-        <input type="text" class="form-control" name="RAD" placeholder="Index of accessibility to radial highways" required="required" /><br>
-        <input type="text" class="form-control" name="TAX" placeholder="TAX" required="required" /><br>
-        <input type="text" class="form-control" name="PTRATIO" placeholder="Pupil-Teacher ratio by town" required="required" /><br>
-        <input type="text" class="form-control" name="B" placeholder="Outsiders" required="required" /><br>
-        <input type="text" class="form-control" name="LSTAT" placeholder=" % lower status of the population" required="required" /><br>
+        <form action="{{ url_for('predict')}}"method="post" id ="myform">
+            
+            <h1>Boston House Price Prediction</h1>
+            
+            <label for="CRIM">
+                Per Capita Crime Rate by Town
+                <input type="number" step="any" name="CRIM" id ="CRIM" class="form-user" placeholder="Range between 0-25" required="required" />
+            </label><br>
+            
+            <label for="ZN">
+                Residential Land Zoned for lots over 25,000 sq.ft.
+                <br><input type="number"  step="any" id="ZN" name="ZN" placeholder="Range between 0-100" required="required" />
+            </label><br>
+            
+            <label for="INDUS">
+                Non-Retail business acres per town
+                <br><input type="number"  step="any" id = "INDUS" name="INDUS" placeholder="Range between 0-25 " required="required" />
+            </label><br>
+            
+            <label for = "CHAS">
+                Near Charles River
+                <br><input type="number"  step="any" id = "CHAS" name="CHAS" placeholder="True or False (0/1)" required="required" />
+            </label><br>
+            
+            <label for="NOX">
+                Nitric Oxides concentration (parts per 10 million)
+                <br><input type="number"  step="any" id ="NOX" name="NOX" placeholder="Range between 0-1" required="required" />
+            </label><br>
+            
+            <label for ="RM">
+                Average number of rooms per dwelling
+                <br><input type="number"  step="any" id="RM" name="RM" placeholder="Range between 0-10" required="required" />
+            </label><br>
+            
+            <label for="Age">
+                Proportion of Owner-occupied units built prior to 1940
+                <br><input type="number"  step="any" id="Age"name="Age" placeholder="Age" required="required" />
+            </label><br>
+            
+            <label for="DIS">
+                Weighted distances to five Boston employment centres
+                <br><input type="number" step="any"  id="DIS" name="DIS" placeholder="Range between 0-10" required="required" />
+            </label><br>
+            
+            <label for="RAD">
+                Index of accessibility to radial highways
+                <br><input type="number"  step="any" id="RAD" name="RAD" placeholder="Range between 0-10" required="required" />
+            </label><br>
 
-       
+            <label for="TAX">
+                Full Value property TAX
+                <br><input type="number"  step="any" id="TAX" name="TAX" placeholder="Range between 100-1000" required="required" />
+            </label><br>
 
-        <button type="submit" class="submit-button">Predict</button>
-    </form>   
- </div>
- {{prediction_text}}
+            <label for="PTRATIO">
+                Pupil-Teacher ratio by town
+                <br><input type="number"  step="any" id="PTRATIO" name="PTRATIO" placeholder="Range between 0-25" required="required" />
+            </label><br>
+            
+            <label for ="OUTSIDER">
+                Proportion of Outsiders by Town
+                <br><input type="number"  step="any" id="OUTSIDER" name="OUTSIDER" placeholder="" required="required" />
+            </label><br>
+
+            <label for="LSTAT">   
+                % Lower Status of the population
+                <br><input type="number"  step="any" id="LSTAT" name="LSTAT" placeholder="Range between 0-50" required="required" />
+            </label><br>
+        
+           <br><br> <button type="submit" class="btn">Predict</button>
+        
+           <div class ="ans">
+               <h2> {{prediction_text}}</h2>
+           </div> 
+        </form> 
+         
+    </div>
 
 </body>
 </html>
