@@ -18,78 +18,78 @@
     
      <!-- Main Input For Receiving Query to our ML -->
         <form action="{{ url_for('predict')}}"method="post" id ="myform">
-            
-            <h1>Boston House Price Prediction</h1>
-            
+            <div class="form">    
+                <h1>Boston House Price Prediction</h1>
+            </div>
             <label for="CRIM">
                 Per Capita Crime Rate by Town
-                <input type="number" step="any" name="CRIM" id ="CRIM" class="form-user" placeholder="Range between 0-25" required="required" />
-            </label><br>
+                <br><input type="number" step="any" name="CRIM" id ="CRIM" class="form-user" placeholder="Range between 0-25" required="required" />
+            </label><br><br>
             
             <label for="ZN">
                 Residential Land Zoned for lots over 25,000 sq.ft.
                 <br><input type="number"  step="any" id="ZN" name="ZN" placeholder="Range between 0-100" required="required" />
-            </label><br>
+            </label><br><br>
             
             <label for="INDUS">
-                Non-Retail business acres per town
+                Non-Retail business acres per Town
                 <br><input type="number"  step="any" id = "INDUS" name="INDUS" placeholder="Range between 0-25 " required="required" />
-            </label><br>
+            </label><br><br>
             
             <label for = "CHAS">
                 Near Charles River
                 <br><input type="number"  step="any" id = "CHAS" name="CHAS" placeholder="True or False (0/1)" required="required" />
-            </label><br>
+            </label><br><br>
             
             <label for="NOX">
-                Nitric Oxides concentration (parts per 10 million)
+                Nitric Oxides Concentration (parts per 10 million)
                 <br><input type="number"  step="any" id ="NOX" name="NOX" placeholder="Range between 0-1" required="required" />
-            </label><br>
+            </label><br><br>
             
             <label for ="RM">
-                Average number of rooms per dwelling
+                Average number of rooms per Dwelling
                 <br><input type="number"  step="any" id="RM" name="RM" placeholder="Range between 0-10" required="required" />
-            </label><br>
+            </label><br><br>
             
             <label for="Age">
                 Proportion of Owner-occupied units built prior to 1940
                 <br><input type="number"  step="any" id="Age"name="Age" placeholder="Age" required="required" />
-            </label><br>
+            </label><br><br>
             
             <label for="DIS">
-                Weighted distances to five Boston employment centres
+                Weighted distances to five Boston Employment Centres
                 <br><input type="number" step="any"  id="DIS" name="DIS" placeholder="Range between 0-10" required="required" />
-            </label><br>
+            </label><br><br>
             
             <label for="RAD">
-                Index of accessibility to radial highways
+                Index of accessibility to Radial Highways
                 <br><input type="number"  step="any" id="RAD" name="RAD" placeholder="Range between 0-10" required="required" />
-            </label><br>
+            </label><br><br>
 
             <label for="TAX">
-                Full Value property TAX
+                Full Value property Tax
                 <br><input type="number"  step="any" id="TAX" name="TAX" placeholder="Range between 100-1000" required="required" />
-            </label><br>
+            </label><br><br>
 
             <label for="PTRATIO">
-                Pupil-Teacher ratio by town
+                Pupil-Teacher ratio by Town
                 <br><input type="number"  step="any" id="PTRATIO" name="PTRATIO" placeholder="Range between 0-25" required="required" />
-            </label><br>
+            </label><br><br>
             
             <label for ="OUTSIDER">
                 Proportion of Outsiders by Town
-                <br><input type="number"  step="any" id="OUTSIDER" name="OUTSIDER" placeholder="" required="required" />
-            </label><br>
+                <br><input type="number"  step="any" id="OUTSIDER" name="OUTSIDER" placeholder="Range between 100-1000" required="required" />
+            </label><br><br>
 
             <label for="LSTAT">   
-                % Lower Status of the population
+                % Lower Status of the Population
                 <br><input type="number"  step="any" id="LSTAT" name="LSTAT" placeholder="Range between 0-50" required="required" />
-            </label><br>
+            </label><br><br>
         
            <br><br> <button type="submit" class="btn">Predict</button>
         
            <div class ="ans">
-               <h2> {{prediction_text}}</h2>
+               <br><br><h2> {{prediction_text}}</h2>
            </div> 
         </form> 
          
