@@ -17,6 +17,7 @@ conda create -p venv python ==3.7 -y
 
 ## Output
 
-![Screenshot (1)](https://user-images.githubusercontent.com/68710115/217972870-3cb63d7c-476a-4576-943a-267a018dee3f.png)
-![Screenshot (2)](https://user-images.githubusercontent.com/68710115/217972886-cd36afff-d0b4-4557-9f3b-1048b5b1f83b.png)
+![Screenshot (3)](https://user-images.githubusercontent.com/68710115/218002077-25036700-ec64-4262-ad8f-53449f716f37.png)
+![Screenshot (6)](https://user-images.githubusercontent.com/68710115/218002096-2a9ff497-d8f7-4dc6-98bd-12d6ce45ac37.png)
+
 
